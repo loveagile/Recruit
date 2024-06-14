@@ -1,0 +1,296 @@
+/*-----------------------------
+    footerのクラス
+--------------------------------*/
+
+footer {
+  line-height: 1.3!important;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 13px;
+  font-weight: normal!important;
+  background-color: #0AE;
+  margin-top: 20rem;
+  // 	@include media('sp') {
+  //     margin-bottom: 65px;
+	// }
+}
+/* パンくず */
+.pagePathParent {
+  width: 100%;
+  display: inline-block;
+  /* font-size: var(--px11); */
+  background-color: rgb(0,170,238);
+  overflow: hidden;
+}
+
+/* パンくずリスト */
+.pagePathParent > ul {
+margin-left: 20px;
+float: left;
+}
+
+/* パンくずリスト項目 */
+.pagePathParent > ul > li {
+float: left;
+}
+
+/* パンくずリスト内ホームアイコン */
+.pagePathParent > ul > li > img {
+width: 15px;
+height: 15px;
+margin-right: 5px;
+margin-top: 11px;
+}
+
+/* １パンくずのあとに＞表示 */
+.pagePath::after {
+content: ">";
+margin: 0 3px;
+color: #fff;
+}
+
+/* 最後の子の場合は＞非表示 */
+.pagePath:last-child::after {
+display: none
+}
+
+/* パンくずリンク */
+.pagePathLink {
+display: inline-block;
+text-decoration: underline;
+color: #fff;
+line-height: 40px;
+}
+
+/* 現在地表示場所 */
+.pagePathChild01 {
+  width: auto;
+  height: 40px;
+  line-height: 40px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 20px 0 25px;
+  float: left;
+  position: relative;
+  z-index: 1;
+}
+
+/* リボンデザイン */
+.pagePathChild01::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  top: 6px;
+  left: -16px;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent rgb(0,170,238) rgb(0,170,238) transparent;
+  border-style: solid;
+  transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.18);
+}
+
+.pagePathChild01::after {
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  top: -15px;
+  right: -15px;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent transparent rgb(0,170,238) transparent;
+  border-style: solid;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* box-shadow: 0 2px 2px -2px var(--shadow); */
+}
+
+.pagePathChild02 {
+float: left;
+position: relative;
+}
+
+.pagePathChild02::after {
+position: absolute;
+  content: "";
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+  bottom: -15px;
+  right: -35px;
+  border-width: 15px 15px 15px 15px;
+  border-color: transparent transparent transparent rgb(0,170,238);
+  border-style: solid;
+  transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+
+/* 現在地 */
+.nowHere {
+color: var(--mynavi-main);
+}
+
+/*--------------------
+パンくず下関連サイト
+----------------------*/
+
+/*パンくず下囲み*/
+.simpleRelationFooter{
+width: 100%;
+background-color: rgb(238, 238, 238);
+margin-top: -2px;
+padding: 32px 20px;
+box-sizing: border-box;
+}
+
+@media screen and (max-width:780px) {
+.simpleRelationFooter {
+  padding: 28px 0;
+}
+/* パンくず */
+.pagePathWrap{
+overflow-x: auto;
+overflow-y: hidden;
+-webkit-overflow-scrolling: touch;
+width: 100%;
+}
+.pagePathParent {
+display: inline-block;
+font-size: var(--px11);
+background-color: var(--mynavi-main);
+width: 800px;
+}
+/* パンくずリスト */
+.pagePathParent > ul {
+margin-left: 20px;
+float: left;
+
+}
+
+/* パンくずリスト項目 */
+.pagePathParent > ul > li {
+float: left;
+}
+}
+
+/*コンテンツ幅囲み*/
+.contentWidthWrap {
+width: 100%;
+overflow: hidden;
+}
+
+@media (min-width: 768px) {
+.contentWidthWrap {
+  max-width: 1034px;
+  padding: 0 17px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+}
+
+/*マイナビロゴ*/
+.simpleRelationFooterMynaviLogo {
+width: 62px;
+height: auto;
+float: left;
+margin-right: 20px
+}
+
+@media (min-width: 768px) {
+.simpleRelationFooterMynaviLogo {
+  width: 82px;
+  height: auto;
+  margin-right: 0;
+}
+}
+
+/*関連サイト囲み*/
+.simpleRelationSiteWrap{
+float: left;
+width: calc(100% - 82px);
+}
+
+@media (min-width: 768px) {
+.simpleRelationSiteWrap {
+  max-width: calc(100% - 154px);
+  text-align: center;
+}
+}
+
+/*関連サイト*/
+.simpleRelationSite{
+margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+.simpleRelationSite {
+  margin-bottom: 8px;
+}
+}
+
+/*関連サイト項目*/
+.simpleRelationSiteItem {
+display: inline;
+font-size: var(--px10);
+line-height: var(--px16);
+}
+
+@media (min-width: 768px) {
+.simpleRelationSiteItem {
+  font-size: var(--px11);
+}
+}
+
+/* 項目区切り線 */
+.simpleRelationSiteItem::after {
+content: "|";
+display: inline;
+margin: 0 5px;
+}
+
+/* 最後の項目時項目区切り線非表示 */
+.simpleRelationSiteItem:last-child::after {
+display: none;
+}
+
+/* コピーライター */
+.copyright {
+font-size: var(--px10);
+}
+
+@media (min-width: 768px) {
+.copyright {
+  float: none;
+  font-size: var(--px11);
+}
+}
+
+/*プライバシーマーク*/
+.privacyLink,
+.privacyMark {
+display: none;
+}
+
+@media (min-width: 768px) {
+.privacyLink,
+.privacyMark {
+  display: block;
+  float: right;
+  width: 72px;
+  height: 72px;
+}
+.privacyLink img{
+  width: 72px;
+}
+}
